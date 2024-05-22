@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg bg-secondary text-bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="data:image/jpeg;base64,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" alt="" height="50px" width="50px"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#works">Works</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacts">Contact</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="#">about</a>
+        </li>
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+    
+    
+    <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/1.jpg"d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    
+    <h1 id="works" class="text-center">Works</h1>
+    
+    <div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+  
+        <div class="embed-responsive embed-responsive-1by1">
+  <iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=KxnKYCXedf1"></iframe>
+</div>
+        
+
+  <div class="card-body">
+    <h5 class="card-title">Lyceum of the Philippine University</h5>
+    <p class="card-text">Lyceum of the Philippines University (LPU), is an institution of higher learning,.</p>
+    <div class="container mt-3">
+  <h3>LPU Arc Library</h3>
+  <p>The library is a one floor area located at the third floor of the Mabini Wing. It can seat more than 700 readers at a time.</p>
+      
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+    Open modal
+  </button>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">ARC 360 Live Tour</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <h4 class="modal-content">The library was named after the late Senator Sotero H. Laurel on September 27, 1989 in abiding appreciation to his passion for scholarship, spirit of enlightened nationalism, unceasing quest for the truth and in grateful recognition of his life time dedication to the Lyceum of the Philippines University
+
+            Senator Sotero H. Laurel is the 2nd LPU President, the 4th child of Dr. Jose P. Laurel, Lyceum’s founding president, and the father of Lyceum’s 3rd President, Atty. Roberto P. Laurel.
+            
+            The library is a one floor area located at the third floor of the Mabini Wing. It can seat more than 700 readers at a time.</h4>
+        <img src="images/4.jpg" class="card-img-top" alt="...">
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+        
+       
+        
+</div>
+</div>
+<div class="row">
+  <div class="col-sm-3">
+    <div class="container mt-3">
+      <h2>Card Image</h2>
+      <p>Image at the top (card-img-top):</p>
+      <div class="card" style="width: 400px">
+        <img
+          class="card-img-top"
+          src="images/img1.png"
+          alt="Card image"
+          style="width: 100%"
+        />
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p class="card-text">
+            Some example text some example text. John Doe is an architect
+            and engineer
+          </p>
+          <div class="container mt-3">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal"
+            >
+              See Profile
+            </button>
+          </div>
+
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">John Doe</h4>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                  ></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">Engineer</div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <p>Image at the bottom (card-img-bottom):</p>
+      <div class="card" style="width: 400px">
+        <div class="card-body">
+          <h4 class="card-title">Jane Doe</h4>
+          <p class="card-text">
+            Some example text some example text. Jane Doe is an architect
+            and engineer
+          </p>
+          <div class="container mt-3">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal"
+            >
+              See Profile
+            </button>
+          </div>
+
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Modal Heading</h4>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                  ></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">Modal body..</div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          class="card-img-bottom"
+          src="images/img2.png"
+          alt="Card image"
+          style="width: 100%"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="container mt-3">
+      <h2>Card Image</h2>
+      <p>Image at the top (card-img-top):</p>
+      <div class="card" style="width: 400px">
+        <img
+          class="card-img-top"
+          src="images/img2.png"
+          alt="Card image"
+          style="width: 100%"
+        />
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p class="card-text">
+            Some example text some example text. John Doe is an architect
+            and engineer
+          </p>
+          <div class="container mt-3">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal"
+            >
+              See Profile
+            </button>
+          </div>
+
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Modal Heading</h4>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                  ></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">Modal body..</div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <p>Image at the bottom (card-img-bottom):</p>
+      <div class="card" style="width: 400px">
+        <div class="card-body">
+          <h4 class="card-title">Jane Doe</h4>
+          <p class="card-text">
+            Some example text some example text. Jane Doe is an architect
+            and engineer
+          </p>
+          <div class="container mt-3">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal"
+            >
+              See Profile
+            </button>
+          </div>
+
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Modal Heading</h4>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                  ></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">Modal body..</div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          class="card-img-bottom"
+          src="images/img1.png"
+          alt="Card image"
+          style="width: 100%"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="container mt-3">
+      <h2>Card Image</h2>
+      <p>Image at the top (card-img-top):</p>
+      <div class="card" style="width: 400px">
+        <img
+          class="card-img-top"
+          src="images/img1.png"
+          alt="Card image"
+          style="width: 100%"
+        />
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p class="card-text">
+            Some example text some example text. John Doe is an architect
+            and engineer
+          </p>
+          <div class="container mt-3">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal"
+            >
+              See Profile
+            </button>
+          </div>
+
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Modal Heading</h4>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                  ></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">Modal body..</div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <p>Image at the bottom (card-img-bottom):</p>
+      <div class="card" style="width: 400px">
+        <div class="card-body">
+          <h4 class="card-title">Jane Doe</h4>
+          <p class="card-text">
+            Some example text some example text. Jane Doe is an architect
+            and engineer
+          </p>
+          <div class="container mt-3">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal"
+            >
+              See Profile
+            </button>
+          </div>
+
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Modal Heading</h4>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                  ></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">Modal body..</div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          class="card-img-bottom"
+          src="images/img2.png"
+          alt="Card image"
+          style="width: 100%"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="container mt-3">
+      <h2>Card Image</h2>
+      <p>Image at the top (card-img-top):</p>
+      <div class="card" style="width: 400px">
+        <img
+          class="card-img-top"
+          src="images/img2.png"
+          alt="Card image"
+          style="width: 100%"
+        />
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p class="card-text">
+            Some example text some example text. John Doe is an architect
+            and engineer
+          </p>
+          <div class="container mt-3">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal"
+            >
+              See Profile
+            </button>
+          </div>
+
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Modal Heading</h4>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                  ></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">Modal body..</div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <p>Image at the bottom (card-img-bottom):</p>
+      <div class="card" style="width: 400px">
+        <div class="card-body">
+          <h4 class="card-title">Jane Doe</h4>
+          <p class="card-text">
+            Some example text some example text. Jane Doe is an architect
+            and engineer
+          </p>
+          <div class="container mt-3">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal"
+            >
+              See Profile
+            </button>
+          </div>
+
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Modal Heading</h4>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                  ></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">Modal body..</div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          class="card-img-bottom"
+          src="images/img1.png"
+          alt="Card image"
+          style="width: 100%"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+    <h1 id="contacts" class="text-center">Contacts</h1> 
+    <div class="container text-center">
+  <div class="row">
+    <div class="col">
+        <h1 id="Forms">Forms</h1> 
+      <h2>HTML Forms</h2>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+    </div>
+    <div class="col">
+        <h1 id="Google maps"> Google map</h1> 
+      <iframe width="400" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=Muralla%20St,%20Intramuros,%20Manila,%201002%20Metro%20Manila%20+(LPU%20Manila)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='https://www.versicherungen.at/cyber-versicherung/'>Cybersecurity-Versicherung</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=ec75aad683fef4412cbe9deb54c517d2be1d7444'></script>
+    </div>
+  </div>
+</div>
+    
+    
+<footer class="text-center bg-body-tertiary">
+  <!-- Grid container -->
+  <div class="container pt-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="https://www.linkedin.com/in/aries-molinar-178b961a0/"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <!-- Github -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="https://github.com/maxshrooom"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2020 Copyright:
+    <a class="text-body" href="https://mdbootstrap.com/">Angeliesulpico@gmail.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
